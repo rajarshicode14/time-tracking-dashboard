@@ -1,0 +1,369 @@
+*{
+    font-family: 'Jetbrains Mono';
+}
+body{
+    background-color: hsl(226, 43%, 10%);
+    padding: 0px 100px;
+    padding-top: 30px;
+}
+#container-main{
+    height: 70vh;
+    padding-bottom: 30px;
+    background-color: hsl(226, 43%, 10%);
+    display: grid;
+    grid-template-areas: 
+    'profile-container  work-container play-container study-container'
+
+    'profile-container  exercise-container social-container selfcare-container';
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 23px;
+}
+
+#profile-container{
+    grid-area: profile-container;
+}
+#work-container{
+    grid-area: work-container;
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
+#play-container{
+    grid-area: play-container;
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: top -2px right 15px;
+}
+#study-container{
+    grid-area: study-container;
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: top -5px right 15px;
+}
+#exercise-container{
+    grid-area: exercise-container;
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: top -0px right 15px;
+}
+#social-container{
+    grid-area: social-container;
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
+#selfcare-container{
+    grid-area: selfcare-container;
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+}
+.container{
+    display: grid;
+    align-items: end;
+    border-radius: 15px 15px 20px 20px;
+}
+.text-container{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    height: 80%;
+}
+.text-container:hover{
+    background-color: hsl(235, 45%, 35%);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    align-self: center;
+    padding-right: 30px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+.header > a > svg > path:hover{
+    fill: white;
+}
+.header > p{
+    height: fit-content;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.text{
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 0px 30px;
+    margin-top: -30px;
+    padding-bottom: 10px;
+    opacity: .8;
+}
+h3{
+    color: white;
+    font-size: 40px;
+    font-weight: lighter;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -2px;
+}
+
+#profile-container{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px 15px 20px 20px;
+}
+#profile{
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+}
+#dp > img{
+    width: 81px;
+    height: 80px;  
+    box-sizing: border-box;
+    border-radius: 50%;     
+    border: 3px solid white;
+}
+#dp{
+    padding-left: 31px;
+    padding-top: 34px;
+}
+#report-for{
+    color: white;
+    font-size: 12px;
+    padding: 0px 30px;
+    padding-top: 25px;
+    opacity: .5;
+}
+.name{
+    color: white;
+    font-size: 30px;
+    font-weight: lighter;
+    padding: 0px 30px;
+    padding-bottom: 80px;
+    margin-top: -10px;
+}
+#duration > p > a{
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0px 30px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    margin-top: -7px;
+    opacity: .5;
+    font-weight: 200;
+}
+#duration > p > a:hover{
+    opacity: 1 !important; /*  Due to the !important declaration the hover effect will not get cancelled by the CSS added through JavaScript */
+}
+#duration > p > a:focus{
+    opacity: 1;
+}
+#work-container{
+    background-color: hsl(15, 100%, 70%);
+}
+#play-container{
+    background-color: hsl(195, 74%, 62%);
+}
+#study-container{
+    background-color: hsl(348, 100%, 68%);
+}
+#exercise-container{
+    background-color: hsl(145, 58%, 55%);
+}
+#social-container{
+    background-color: hsl(264, 64%, 52%);
+}
+#selfcare-container{
+    background-color: hsl(43, 84%, 65%);
+}
+
+
+@media (max-width: 1000px) {
+    #container-main{
+        grid-template-areas: 'profile-container work-container play-container'
+
+        'profile-container study-container exercise-container'
+
+        'profile-container social-container selfcare-container';
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 100vh;
+    }
+    #profile-container{
+        grid-area: profile-container;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 15px 15px 20px 20px;
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    #work-container{
+        grid-area: work-container;
+        background-color: hsl(15, 100%, 70%);
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #play-container{
+        grid-area: play-container;
+        background-color: hsl(195, 74%, 62%);
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    #study-container{
+        grid-area: study-container;
+        background-color: hsl(348, 100%, 68%);
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    #exercise-container{
+        grid-area: exercise-container;
+        background-color: hsl(145, 58%, 55%);
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    #social-container{
+        grid-area: social-container;
+        background-color: hsl(264, 64%, 52%);
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    #selfcare-container{
+        grid-area: selfcare-container;
+        background-color: hsl(43, 84%, 65%);
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    
+}
+
+@media (max-width: 787px){
+    .text-container{
+        height: 75%;
+    }
+    #container-main{
+        grid-template-areas: 
+        'profile-container'
+
+        'work-container'
+
+        'play-container'
+
+        'study-container'
+
+        'exercise-container'
+
+        'social-container'
+
+        'selfcare-container';
+
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(6, 1fr);
+        height: 100vh;
+        padding: 0px 10px;
+        margin-right: 0px;
+    }
+    #profile-container{
+        grid-area: profile-container;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 15px 15px 20px 20px;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #work-container{
+        grid-area: work-container;
+        background-color: hsl(15, 100%, 70%);
+        border-radius: 20px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    } 
+    #play-container{
+        grid-area: play-container;
+        background-color: hsl(195, 74%, 62%);
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    #study-container{
+        grid-area: study-container;
+        background-color: hsl(348, 100%, 68%);
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    #exercise-container{
+        grid-area: exercise-container;
+        background-color: hsl(145, 58%, 55%);
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    #social-container{
+        grid-area: social-container;
+        background-color: hsl(264, 64%, 52%);
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    #selfcare-container{
+        grid-area: selfcare-container;
+        background-color: hsl(43, 84%, 65%);
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+    .timeNtext{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .time{
+        display: inline-block;
+        padding-bottom: 30px;
+    }
+    .text{
+        display: inline-block;
+    }
+    body{
+        padding: 0px;
+    }
+    #duration{
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #hide{
+        display: none;
+    }
+    #profile{
+        display: grid;
+        grid-template-areas: 'img report-for'
+
+        'img name';
+
+        grid-template-columns: 125px 2fr;
+        grid-template-rows: 65px 80px;
+        column-gap: 0px;
+    }
+    #profile > img{
+        grid-area: img;
+    }
+    #report-for{
+        grid-area: report-for;
+        margin-top: 25px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .name{
+        grid-area: name;
+        padding-left: 10px;
+        font-size: 23px;
+        align-self: start;
+        margin-top: 7px;
+    }
+    #profile-container{
+        height: 220px;
+    }
+}
